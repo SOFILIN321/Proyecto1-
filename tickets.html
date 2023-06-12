@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickets</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
 </head>
 <body>
   
@@ -57,11 +58,11 @@
                 <div class="d-grid gap-2 d-flex mx-auto">
                 <div class="col-md-6">
                   <label for="Cantidad" class="form-label">Cantidad</label>
-                  <input name="cantidad" class="form-control"  placeholder="Cantidad">
+                  <input name="cantidad" class="form-control cantidad"  placeholder="Cantidad">
                 </div>
                 <div class="col-md-6">
                   <label for="Categoria" class="form-label">Categoría</label>  
-              <select class="form-select " name="categoria">  
+              <select class="form-select categoria " name="categoria">  
                 <option value="estudiante">Estudiante</option>
                 <option value="trainee">Trainee</option>
                 <option value="junior">Junior</option>
@@ -69,7 +70,7 @@
                </div>
                </div>
 
-            <div class="alert alert-primary text-start mt-2" name="total">Total a pagar $</div>
+            <div class="alert alert-primary text-start mt-2 total" name="total">Total a pagar $</div>
             
             <div class="d-grid gap-2 d-flex mx-auto">
               <button type= "reset" class= "btn btn-success col-6" >Borrar</button>
@@ -81,7 +82,7 @@
           </form>
       </section>
 
-
+       <script src="script.js"></script>
       <script src="assets/js/bootstrap.min.js"> 
       </script> 
 </body>
