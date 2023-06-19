@@ -1,89 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickets</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    
-</head>
-<body>
-  
-    <section class="d-flex justify-content-center row-cols-3" >
-        <div class= "card border-primary mb-3" style="max-width: 15rem;">
-          <div class="card-body text-center ">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+   
+    <main>
+   
+      <div class="row text-center justify-content-center">
+        <div class="card border-primary m-2" style="max-width: 14rem;">
+          <div class="card-body">
             <h5 class="card-title">Estudiante</h5>
             <p class="card-text">Tiene un descuento</p>
-            <h5 class="card-title">80%</h5>
-            <p class="card-text fw-lighter fs-6 ">*presentar documentación</p>
+            <p class=" card-text"><strong>80%</strong></p>
+            <p class="fw-lighter" style="font-size: smaller;"> *Presentar documentación</p>
           </div>
         </div>
-        <div class="card border-info mb-3 ms-2" style="max-width: 15rem;">
-          <div class="card-body text-center">
-            <h5 class="card-title">Trainee</h5>
+
+        <div class="card border-success m-2" style="max-width: 14rem;">
+          <div class="card-body">
+            <h5 class="card-title">Treinee</h5>
             <p class="card-text">Tiene un descuento</p>
-            <h5 class="card-title">50%</h5>
-            <p class="card-text fw-lighter fs-6 ">*presentar documentación</p>
+            <p class=" card-text"><strong>50%</strong></p>
+            <p class="fw-lighter" style="font-size: smaller;"> *Presentar documentación</p>
           </div>
         </div>
-        <div class="card border-warning mb-3 ms-2" style="max-width: 15rem;">
-          <div class="card-body text-center">
+
+        <div class="card border-warning m-2" style="max-width: 14rem;">
+          <div class="card-body">
             <h5 class="card-title">Junior</h5>
             <p class="card-text">Tiene un descuento</p>
-            <h5 class="card-title">15%</h5>
-            <p class="card-text fw-lighter fs-6">*presentar documentación</p>
+            <p class=" card-text"><strong>15%</strong></p>
+            <p class="fw-lighter" style="font-size: smaller;"> *Presentar documentación</p>
           </div>
         </div>
-      </section>
-      <section>
-        <div>
-        <h1 class="text-center text-dark fs-6 text-ligh"> VENTA</h1>
+        
+
+      </div>  
+
+         
+    <div class="container mx-auto col-6">
+      <p class="text-center">VENTA</p>
+      <h2
+        id="serorador"
+        class="text-center text-wrap mx-auto p-2"
+      >
+        VALOR DE VENTA $200
+      </h2>
+      <form id="form_compra" method="POST" class="p-1">
+      <div class="row">
+        <div class="col mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nombre"
+            aria-label="First name"
+          />
+        </div>
+        <div class="col mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Apellido"
+            aria-label="Last name"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Correo"
+            aria-label="Email"
+          />
+        </div>
+        <div class="col mb-3 ">
+          <label for="cantidad" class="form-label">Cantidad</label>
+          <input class="form-control" type="number" min="0" placeholder="Cantidad" id="cantidad">
+
+        </div>
+        <div class="col mb-3 ">
+          <label for="categoria" >Categoría</label>
+          <select id="categoria" class="form-select" aria-label=".form-select example">
+            <option value="estudiante" selected>Estudiante</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior">Junior</option>
+          </select>
+        </div>
       </div>
-      <h2 class="text-center text-dark fs-2">VALOR TICKET $200</h2>
-      </section>
-      <section>
-        <form id = "formular" class="row g-3">
-        <div class="input-group mb-3">
-          <div class="mx-auto" style="width: 500px;" >
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
-              <input type="text" class="form-control ms-2" placeholder="Apellido" aria-label="Apellido">
-            </div>
-            <div class="mx-auto" style="width: 500px;" >
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Correo" aria-label="Correo">
-              </div>
-              <div>
-                <div class="d-grid gap-2 d-flex mx-auto">
-                <div class="col-md-6">
-                  <label for="Cantidad" class="form-label">Cantidad</label>
-                  <input name="cantidad" class="form-control cantidad"  placeholder="Cantidad">
-                </div>
-                <div class="col-md-6">
-                  <label for="Categoria" class="form-label">Categoría</label>  
-              <select class="form-select categoria " name="categoria">  
-                <option value="estudiante">Estudiante</option>
-                <option value="trainee">Trainee</option>
-                <option value="junior">Junior</option>
-              </select>
-               </div>
-               </div>
+      <div id="total" class="alert alert-primary" role="alert">
+        Total a pagar: $
+      </div>
+      <div class="row">
+        <div class="col p-1">
+            <button type="reset" id="borrar" class="btn btn-success w-100" >Borrar</button>
+        </div>
+        <div class="col p-1">
+            <button type="submit" id="resumen" class="btn btn-success w-100" >Resumen</button>
+        </div>
+    </div>
+    </form>
+    </div>
+    </main>
 
-            <div class="alert alert-primary text-start mt-2 total" name="total">Total a pagar $</div>
-            
-            <div class="d-grid gap-2 d-flex mx-auto">
-              <button type= "reset" class= "btn btn-success col-6" >Borrar</button>
-              <button name= "submit" class= "btn btn-success col-6" >Resumen</button>
-            </div> 
-            
-          </div>
-           </div>
-          </form>
-      </section>
 
-       <script src="script.js"></script>
-      <script src="assets/js/bootstrap.min.js"> 
-      </script> 
-</body>
+   
+    <script src=assets/js/bootstrap.min.js></script>
+    <script src="script.js"></script>
+  </body>
 </html>
